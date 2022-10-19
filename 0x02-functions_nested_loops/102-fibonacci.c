@@ -1,20 +1,28 @@
 #include <stdio.h>
 
 /**
- * main - Prints natural numbers below 1024 that are
- * multiplies of 3 or 5
+ * main - Prints the add of the even-valued
+ * fibonacci numbers.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	int a, b;
+	long int n1, n2, fn, afn;
 
-	for (a = 1; a < 1024; a++)
+	n1 = 1;
+	n2 = 2;
+	fn = afn = 0;
+	while (fn <= 4000000)
 	{
-		if ((a % 3) == 0 || (a % 5) == 0)
-			b += a;
+		fn = n1 + n2;
+		n1 = n2;
+		n2 = fn;
+		if ((n1 % 2) == 0)
+		{
+			afn += n1;
+		}
 	}
-	printf("%d\n", b);
+	printf("%ld\n", afn);
 	return (0);
 }
