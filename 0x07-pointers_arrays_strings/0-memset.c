@@ -1,5 +1,3 @@
-Task 0
-
 #include "main.h"
 #include <string.h>
 
